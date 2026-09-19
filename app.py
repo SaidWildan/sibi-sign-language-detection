@@ -31,7 +31,7 @@ def gen_frames():  # generate frame by frame from camera
     new_frame_time = 0
 
     # Load Model
-    with open("Model/svm_model_v3.sav", 'rb') as file:
+    with open("model/svm_model_v3.sav", 'rb') as file:
         action_model = pickle.load(file)
     
     SIBI_Lang = pd.read_csv('SIBI_Lang_Spatio.csv')
@@ -161,4 +161,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="127.0.0.1", debug=False)
